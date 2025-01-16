@@ -508,7 +508,9 @@ abstract class LoadIndicatorState<T extends LoadIndicator> extends State<T>
         }
       }
     } else {
-      if (activity is DragScrollActivity || activity is DrivenScrollActivity) {
+      if (activity is DragScrollActivity ||
+          activity is DrivenScrollActivity ||
+          activity is IdleScrollActivity) {
         _enableLoading = true;
       }
     }
